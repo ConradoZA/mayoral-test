@@ -1,6 +1,7 @@
-import NavBar from './NavBar';
-import Meta from './Meta';
 import { ReactNode } from 'react';
+
+import Meta from './Meta';
+import NavBar from './NavBar';
 
 interface LayoutProps {
   children: ReactNode;

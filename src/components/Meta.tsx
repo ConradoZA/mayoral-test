@@ -13,7 +13,7 @@ const Meta = ({ title, keywords, description }: MetaProps): JSX.Element => {
       <meta name='keywords' content={keywords} />
       <meta name='description' content={description} />
       <meta charSet='utf-8' />
-      <link rel='icon' type='image/svg+xml' href='/src/favicon.svg' />
+      <link rel='icon' type='image/ico' href='./favicon.ico' />
       <title>{title}</title>
     </Head>
   );
