@@ -2,12 +2,18 @@ import MoreIcon from '@mui/icons-material/AddCircleOutlineRounded';
 import LessIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
 import SearchIcon from '@mui/icons-material/Search';
 import { AppBar, Box, IconButton, Toolbar } from '@mui/material';
+import { KeyboardEvent, useRef } from 'react';
 
 import { Search } from './search/Search';
 import { SearchIconWrapper } from './search/SearchIconWrapper';
 import { StyledInputBase } from './search/StyledInputBase';
 
 const NavBar = () => {
+  const inputRef = useRef<HTMLInputElement>();
+  const prepareSearch = (e: KeyboardEvent): void => {
+    console.log(e);
+    console.log(inputRef.current.value);
+  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static' color='inherit'>
@@ -18,7 +24,14 @@ const NavBar = () => {
                 <SearchIconWrapper>
                   <SearchIcon />
                 </SearchIconWrapper>
-                <StyledInputBase placeholder='Buscar' inputProps={{ 'aria-label': 'buscar' }} />
+                <StyledInputBase
+                  placeholder='Buscar'
+                  inputProps={{
+                    'aria-label': 'buscar',
+                    ref: (el: HTMLInputElement) => (inputRef.current = el),
+                    onKeyUp: (e) => prepareSearch(e),
+                  }}
+                />
               </Search>
             </Box>
             <Box sx={{ flexGrow: 3 }} />
