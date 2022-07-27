@@ -13,7 +13,7 @@ const ProductsList = (p: ListProps) => {
     <Grid
       container
       columnSpacing={1}
-      columns={{ xs: p.nrPerRow, sm: p.nrPerRow % 2 == 0 ? 6 : 4 }}
+      columns={{ xs: p.nrPerRow, sm: p.nrPerRow % 2 === 0 ? 5 : 4 }}
       justifyContent='space-around'
       maxWidth={'95%'}
     >
