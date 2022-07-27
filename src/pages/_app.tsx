@@ -1,11 +1,7 @@
 import './globals.css';
 
 import Layout from '../components/Layout';
-
-interface AppProps {
-  Component: any;
-  pageProps: any;
-}
+import { AppProps } from 'next/app';
 
 function MayoralApp({ Component, pageProps }: AppProps) {
   return (
