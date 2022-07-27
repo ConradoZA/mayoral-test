@@ -15,7 +15,7 @@ interface HomeProps {
 const HomePage: NextPage = ({ products }: HomeProps): JSX.Element => {
   return (
     <div>
-      <ProductsList list={products} />
+      <ProductsList list={products} nrPerRow={2} />
     </div>
   );
 };

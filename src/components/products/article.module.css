@@ -1,0 +1,15 @@
+.price {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.discounted {
+  font-size: small;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+.discount {
+  font-size: medium;
+  font-weight: bold;
+  color: darkred;
+}
