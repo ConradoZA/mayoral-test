@@ -1,5 +1,7 @@
-import { Grid } from '@mui/material';
 import { Article } from 'pages/api/data/data';
+
+import { Grid } from '@mui/material';
+
 import OneArticle from './OneArticle';
 
 interface ListProps {

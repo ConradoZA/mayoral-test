@@ -1,8 +1,9 @@
+import { KeyboardEvent, useRef } from 'react';
+
 import MoreIcon from '@mui/icons-material/AddCircleOutlineRounded';
 import LessIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
 import SearchIcon from '@mui/icons-material/Search';
 import { AppBar, Box, IconButton, Toolbar } from '@mui/material';
-import { KeyboardEvent, useRef } from 'react';
 
 import { Search } from './search/Search';
 import { SearchIconWrapper } from './search/SearchIconWrapper';

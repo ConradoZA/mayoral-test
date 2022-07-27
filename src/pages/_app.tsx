@@ -1,13 +1,14 @@
 import './globals.css';
 
-import Layout from '../components/Layout';
+import Meta from 'components/Meta';
 import { AppProps } from 'next/app';
 
 function MayoralApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <>
+      <Meta />
       <Component {...pageProps} />
-    </Layout>
+    </>
   );
 }
 

@@ -1,3 +1,5 @@
+import { Article } from 'pages/api/data/data';
+
 import {
   Button,
   Card,
@@ -7,7 +9,7 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material';
-import { Article } from 'pages/api/data/data';
+
 import style from './article.module.css';
 
 interface OneArticleProps {

@@ -2,10 +2,12 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { server } from '../config';
 
-import { NextPage } from 'next';
+import NavBar from 'components/NavBar';
 import ProductsList from 'components/products/ProductsList';
+import { NextPage } from 'next';
+
+import { server } from '../config';
 import { Article } from './api/data/data';
 
 interface HomeProps {
@@ -15,6 +17,7 @@ interface HomeProps {
 const HomePage: NextPage = ({ products }: HomeProps): JSX.Element => {
   return (
     <div>
+      <NavBar />
       <ProductsList list={products} nrPerRow={2} />
     </div>
   );
