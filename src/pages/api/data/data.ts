@@ -7,7 +7,7 @@ export type Article = {
   options?: string[];
 };
 
-export const articles: Article[] = [
+export const products: Article[] = [
   {
     id: '1',
     name: 'Camiseta manga corta print',
