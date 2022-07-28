@@ -39,6 +39,7 @@ const NavBar = (p: NavBarProps) => {
           color='primary'
           onClick={p.lessItems}
           sx={{ mr: 2, mt: -1, mb: 0 }}
+          id='less'
         >
           <LessIcon sx={{ fontSize: 40 }} />
         </IconButton>
@@ -48,6 +49,7 @@ const NavBar = (p: NavBarProps) => {
           color='primary'
           onClick={p.moreItems}
           sx={{ mt: -1, mb: 0 }}
+          id='more'
         >
           <MoreIcon sx={{ fontSize: 40 }} />
         </IconButton>

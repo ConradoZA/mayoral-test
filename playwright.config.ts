@@ -1,5 +1,9 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
-import { devices } from '@playwright/test';
+import { devices, expect } from '@playwright/test';
+import { matchers } from 'playwright-expect';
+
+/* add custom matchers */
+expect.extend(matchers);
 
 /**
  * Read environment variables from file.
@@ -66,32 +70,32 @@ const config: PlaywrightTestConfig = {
     // },
 
     /* Test against mobile viewports. */
-    {
-      name: 'Mobile Chrome',
-      use: {
-        ...devices['Pixel 5'],
-      },
-    },
-    {
-      name: 'Mobile Safari',
-      use: {
-        ...devices['iPhone 12'],
-      },
-    },
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: {
+    //     ...devices['Pixel 5'],
+    //   },
+    // },
+    // {
+    //   name: 'Mobile Safari',
+    //   use: {
+    //     ...devices['iPhone 12'],
+    //   },
+    // },
 
     /* Test against branded browsers. */
-    {
-      name: 'Microsoft Edge',
-      use: {
-        channel: 'msedge',
-      },
-    },
-    {
-      name: 'Google Chrome',
-      use: {
-        channel: 'chrome',
-      },
-    },
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: {
+    //     channel: 'msedge',
+    //   },
+    // },
+    // {
+    //   name: 'Google Chrome',
+    //   use: {
+    //     channel: 'chrome',
+    //   },
+    // },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */

@@ -26,6 +26,8 @@ const OneArticle = (p: OneArticleProps) => {
         m: 2,
         border: '1px solid skyblue',
       }}
+      id={`item_${p.data.id}`}
+      className='cards'
     >
       <CardActionArea
         sx={{ maxHeight: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}

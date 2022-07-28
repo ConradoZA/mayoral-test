@@ -48,7 +48,7 @@ const HomePage: NextPage = ({ products }: HomeProps): JSX.Element => {
   useEffect(() => {
     const tempOrder = filteredProducts.length > 0 ? filteredProducts : products;
 
-    tempOrder.sort((a, b) => {
+    tempOrder.sort((a: Article, b: Article) => {
       const x = a.discount ? a.discount : a.price;
       const y = b.discount ? b.discount : b.price;
       if (order === 'ASC') {
