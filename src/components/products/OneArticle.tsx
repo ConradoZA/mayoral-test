@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 
-import style from './article.module.css';
+import style from '../../styles/OneArticle.module.css';
 
 interface OneArticleProps {
   data: Article;

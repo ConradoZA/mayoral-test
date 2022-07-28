@@ -1,4 +1,4 @@
-import './globals.css';
+import '../styles/globals.css';
 
 import Meta from 'components/Meta';
 import { AppProps } from 'next/app';

@@ -3,8 +3,8 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import NavBar from 'components/NavBar';
-import ProductsList from 'components/products/ProductsList';
+import NavBar from '../components/NavBar';
+import ProductsList from '../components/products/ProductsList';
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
@@ -24,9 +24,6 @@ const HomePage: NextPage = ({ products }: HomeProps): JSX.Element => {
   const moreItems = (): void => {
     setNrPerRow(2);
   };
-  const getNrItems = (): number => {
-    return nrPerRow;
-  };
 
   /* Búsqueda */
   const [filteredProducts, setFilteredProducts] = useState<Article[]>([]);
@@ -40,9 +37,6 @@ const HomePage: NextPage = ({ products }: HomeProps): JSX.Element => {
       const tempFilter = products.filter((product: Article) => product.name.includes(value.trim()));
       setFilteredProducts(tempFilter);
     }
-  };
-  const getProducts = (): Article[] => {
-    return filteredProducts;
   };
 
   /* RENDER */
