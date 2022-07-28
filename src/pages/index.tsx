@@ -34,10 +34,31 @@ const HomePage: NextPage = ({ products }: HomeProps): JSX.Element => {
     if (!value) {
       setFilteredProducts(products);
     } else {
-      const tempFilter = products.filter((product: Article) => product.name.includes(value.trim()));
+      const tempFilter = products.filter((product: Article) =>
+        product.name.toUpperCase().includes(value.trim().toUpperCase()),
+      );
       setFilteredProducts(tempFilter);
     }
   };
+
+  /* Ordenación */
+  // FIXME: no consigo que re-renderice con los valores actuales de las tres cosas: productos/búsqueda, items por fila y ordenación
+  const [order, setOrder] = useState<'ASC' | 'DES'>('ASC');
+
+  useEffect(() => {
+    const tempOrder = filteredProducts.length > 0 ? filteredProducts : products;
+
+    tempOrder.sort((a, b) => {
+      const x = a.discount ? a.discount : a.price;
+      const y = b.discount ? b.discount : b.price;
+      if (order === 'ASC') {
+        return parseInt(x) - parseInt(y);
+      } else {
+        return parseInt(y) - parseInt(x);
+      }
+    });
+    setFilteredProducts(tempOrder);
+  }, [order]);
 
   /* RENDER */
   const navBarProps = {

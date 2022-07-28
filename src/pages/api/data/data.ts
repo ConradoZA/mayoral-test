@@ -32,9 +32,9 @@ export const products: Article[] = [
   {
     id: '4',
     name: 'Camiseta manga corta ECOFRIENDS skate',
-    price: '14,99',
+    price: '14,98',
     image: './camiseta-manga-corta-ecofriends-skate.jpg',
-    discount: '7,49',
+    discount: '7,99',
   },
   {
     id: '5',
